@@ -1,2 +1,2 @@
-# neon-loaders
+# Neon loaders
 Neon javascript + CSS loaders
