@@ -1,0 +1,9 @@
+{
+  "name": "neon-loaders",
+  "version": "1.0.0",
+  "description": "Javascript components for neon loaders made with CSS",
+  "main": "index.js",
+  "repository": "git@github.com:KristijanKanalas/neon-loaders.git",
+  "author": "Kristijan Kanalaš <kanalaskristijan@gmail.com>",
+  "license": "MIT"
+}
