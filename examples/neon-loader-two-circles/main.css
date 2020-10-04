@@ -1,0 +1,57 @@
+body {
+    background: #1F2525;
+  }
+
+.circle, .circle::before, .circle::after {
+    position: absolute;
+    border-radius: 50%;
+}
+.circle {
+    left: 45vw;
+    top: 35vh;
+    height: 20vmin;
+    width: 35vmin;
+    animation: turn 3s 500ms alternate-reverse infinite ease-in-out, hue 3.4s alternate infinite ease-in-out;
+}
+.circle::before {
+    content: '';
+    top: 2vmin;
+    height: 25vmin;
+    width: 10vmin;
+    border-right: 0.9vmin groove #ec0cec; 
+    box-shadow: 0.3vmin 0 2vmin rgba(237, 12, 237, 0.4);
+    animation: turn 4.3s alternate-reverse infinite ease-in-out, 
+               opacity 3.3s alternate infinite ease-in-out, 
+               hue 3.3s alternate infinite ease-in-out;
+}
+.circle::after {
+    content: '';
+    top: 4vmin;
+    left: 0.5vmin;
+    height: 12vmin;
+    width: 25vmin;
+    border-bottom: 0.9vmin groove #ec0cec; 
+    box-shadow: 0 0.5vmin 2vmin rgba(237, 12, 237, 0.5);
+    animation: turn 4.4s 1s alternate-reverse infinite ease-in-out, 
+               opacity 3.4s alternate infinite ease-in-out, 
+               hue 3.4s alternate infinite ease-in-out;
+}
+ @keyframes turn {
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes opacity {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes hue {
+    to {
+        filter: hue-rotate(360deg);
+    }
+} 
+
