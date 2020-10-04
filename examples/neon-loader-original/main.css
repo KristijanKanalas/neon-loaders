@@ -1,0 +1,61 @@
+body {
+    background: #1F2525;
+  }
+.circle, .circle::before, .circle::after {
+    position: absolute;
+    border-radius: 50%;
+    background: transparent;
+}
+.circle {
+    left: 40vw;
+    top: 30vh;
+    height: 17vmin;
+    width: 17vmin;
+    border-left: 0.4vmin dotted #ec0cec; 
+    box-shadow: -0.5vmin 0 0.6vmin rgba(237, 12, 237, 0.3);
+    animation: turn 6s alternate infinite  ease-in-out, 
+               opacity 3s alternate infinite  ease-in-out, 
+               hue 3s alternate infinite  ease-in-out;
+}
+.circle::before {
+    content: '';
+    top: 0.5vmin;
+    left: 0vmin;
+    height: 16vmin;
+    width: 16vmin;
+    border-right: 0.4vmin dotted #ec0cec; 
+    box-shadow: 0.5vmin 0 0.6vmin rgba(237, 12, 237, 0.4);
+    animation: turn 6.3s alternate infinite  ease-in-out, 
+               opacity 3.3s alternate infinite  ease-in-out, 
+               hue 3.3s alternate infinite  ease-in-out;
+}
+.circle::after {
+    content: '';
+    top: 0.8vmin;
+    left: 0.5vmin;
+    height: 15vmin;
+    width: 15vmin;
+    border-bottom: 0.4vmin dotted #ec0cec; 
+    box-shadow: 0 0.5vmin 0.6vmin rgba(237, 12, 237, 0.5);
+    animation: turn 6.4s alternate infinite  ease-in-out, 
+               opacity 3.4s alternate infinite  ease-in-out, 
+               hue 3.4s alternate infinite  ease-in-out;
+}
+@keyframes turn {
+    to {
+        transform: rotate(1360deg);
+    }
+}
+@keyframes opacity {
+    from {
+        opacity: 0.3;
+    }
+    to {
+        opacity: 0.9;
+    }
+}
+@keyframes hue {
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
