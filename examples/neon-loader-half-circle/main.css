@@ -1,0 +1,53 @@
+body {
+    background: #0f0f0f;
+}
+.container {
+    margin: 10vmin;
+    margin-top: 20vmin;
+    animation: rotate 7s infinite alternate; 
+}
+.line {
+    position: absolute;
+    top: -15vmin;
+    left: 28vmin;
+    width: 0.5vmin;
+    height: 90vmin;
+    background: linear-gradient(#8c4496, transparent, #8c4496);
+    animation: rotate 7s infinite alternate-reverse,  hue 5.5s infinite;
+    opacity: 0.5;
+}
+.circle {
+    width: 60vmin;
+    height: 60vmin;
+    background: #0f0f0f;
+    background-image: radial-gradient(40% 50% at 70% 50%, transparent 10%, #446e96 35%, #8c4496 60%, transparent 81%, transparent 100%);
+    background-size:  75vmin 5vmin;
+    animation: background-change 7s infinite alternate, hue 5.5s infinite, scale 7s infinite alternate;
+    box-shadow: inset 0 0 1vmin 1vmin #0f0f0f, 1vmin 0 1vmin 1vmin #0f0f0f;
+    border-radius: 50%;
+    opacity: 0.7;
+    transform: scale(0.8);
+}
+
+@keyframes background-change { 
+  to {
+     background-size: 75vmin 1vmin;
+     opacity: 1;
+      }
+  } 
+
+@keyframes hue {
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+@keyframes rotate {
+    to {
+        transform: rotateY(360deg);
+    }
+}
+@keyframes scale {
+    to {
+        transform: scale(1.5);
+    }
+}
